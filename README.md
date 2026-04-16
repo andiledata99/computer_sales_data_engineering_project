@@ -8,8 +8,11 @@ The goal is to transform raw transactional data into high-quality, analytics-rea
 The business lacked:
 
 *Centralized sales reporting
+
 *Visibility into product profitability
+
 *Insights into customer purchasing behavior
+
 *Performance tracking for sales employees
 
 This project solves these challenges by building a scalable and automated data platform.
