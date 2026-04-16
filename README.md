@@ -35,6 +35,20 @@ SCRIPTS
 <img width="502" height="243" alt="image" src="https://github.com/user-attachments/assets/0835c8b8-3b32-4d47-b4ce-f58f68a899c5" />
 
 
+VERSION CONTROL
+## 🔁 Version Control
+
+Version control was implemented using Git:
+
+### Key Practices:
+
+* Feature-based branching
+* Meaningful commit messages
+* Code version tracking
+* Collaboration-ready structure
+
+<img width="449" height="116" alt="image" src="https://github.com/user-attachments/assets/c6676697-9b2e-4c90-9c36-d7a26833bcfd" />
+
 
 LICENSE
 
