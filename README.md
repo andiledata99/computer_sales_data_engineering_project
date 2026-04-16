@@ -13,44 +13,27 @@ The business lacked:
 This project solves these challenges by building a scalable and automated data platform.
 **Repository structure**
 
-├── docs/
-│   ├── architecture.png
-│   ├── data_model.png
-│  
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── curated/
-│
-├── pipelines/
-│   ├── ingestion.py
-│   ├── transformation.py
-│   └── orchestration_dag.py
-│
-├── sql/
-│   ├── staging/
-│   ├── marts/
-│   └── analytics/
-│
-├── models/
-│   ├── fact_sales.sql
-│   ├── dim_customer.sql
-│   ├── dim_pc_spec.sql
-│   ├── dim_store.sql
-│   └── dim_date.sql
-│
-├── tests/
-│   ├── data_quality_checks.sql
-│
-│
-├── dashboards/
-│   └── powerbi.pbix
+data_architecture
+
+<img width="958" height="495" alt="data modelling planning " src="https://github.com/user-attachments/assets/3b69feb7-d567-45f0-9760-8d6ab2280aef" />
+
+<img width="771" height="731" alt="Untitled Diagram" src="https://github.com/user-attachments/assets/c40f9987-aba8-4eb8-9839-7d9169b1dcd5" />
+
+data_security
+<img width="352" height="335" alt="andile_data_engineer_server_roles" src="https://github.com/user-attachments/assets/2cc3b679-b742-4e6d-80fc-16edb8ee742d" />
+
+<img width="350" height="332" alt="ketro_data_analyst_server_roles" src="https://github.com/user-attachments/assets/263c8d38-faa6-4e01-8365-a4f13c724412" />
+
+<img width="353" height="335" alt="rhofiwa_business_manager_server_roles" src="https://github.com/user-attachments/assets/51974f51-dbe8-49b5-b5a7-edcc812113d5" />
+
+dataset
+scripts
+LICENSE
+README.md
+
+
 
 ``` 🏗️ Data Architecture
-
-
-
 
 
 Source (CSV) → Ingestion → Data Lake → Transformation → Data Warehouse → BI Dashboard
@@ -63,7 +46,7 @@ Source (CSV) → Ingestion → Data Lake → Transformation → Data Warehouse �
 * **Storage:** Data lake (raw, processed, curated layers)
 * **Transformation:** SQL + Python
 * **Warehouse:** Structured star schema
-* **Visualization:** Power BI
+
 
 ---
 
@@ -88,48 +71,14 @@ Source (CSV) → Ingestion → Data Lake → Transformation → Data Warehouse �
 
 * Handled missing values and inconsistencies
 * Standardized formats (dates, pricing, categories)
-* Derived new metrics:
 
-  * Profit
-  * Discount impact
-  * Revenue trends
-
----
 
 ### 4. Data Modelling (Star Schema ⭐)
 
 #### Fact Table:
 
-* `fact_sales`
-
 #### Dimension Tables:
 
-* `dim_customer`
-* `dim_product`
-* `dim_employee`
-* `dim_date`
-
-This enables efficient analytical queries and reporting.
-
----
-
-### 5. Data Warehouse
-
-* Structured data into analytical models
-* Optimized queries for performance
-
----
-
-### 6. Data Visualization
-
-* Built dashboards in Power BI:
-
-  * Sales performance
-  * Profitability analysis
-  * Employee performance
-  * Regional trends
-
----
 
 ## 🔐 Data Security & Governance
 
@@ -139,20 +88,10 @@ To ensure secure and reliable data handling:
 
 * Role-Based Access Control (RBAC):
 
-  * Admin → Full access
-  * Analyst → Read-only
-  * Business users → Restricted views
+  * Data Engineer → Full access
+  * Data Analyst → Read-only
+  * Business manager → Restricted views
 
-### 🔐 Data Protection
-
-* Sensitive fields masked (e.g., customer contact details)
-* Secure storage using encrypted environments
-
-### 🛡️ Network Security
-
-* Private endpoints / secure connections used to prevent public exposure of data ([Microsoft Learn][2])
-
----
 
 ## 🔁 Version Control
 
@@ -165,13 +104,6 @@ Version control was implemented using Git:
 * Code version tracking
 * Collaboration-ready structure
 
-### Example Workflow:
-
-```
-main → dev → feature/data-transformation
-```
-
----
 
 ## 🧪 Data Quality Checks
 
@@ -227,34 +159,4 @@ This solution enables:
 
 Andile Dube
 
----
-
-# 🔥 3. WHAT YOU JUST DID (THIS IS IMPORTANT)
-
-With this structure + README, your project now shows:
-
-✅ End-to-end pipeline thinking
-✅ Real business value
-✅ Data modelling expertise
-✅ Engineering practices (version control, testing)
-✅ Security awareness (RARE for juniors 🔥)
-
----
-
-# 🚀 NEXT LEVEL (If you want to go elite)
-
-I can help you:
-
-* Turn this into a **LinkedIn post that attracts recruiters**
-* Add **Airflow DAG code**
-* Add **dbt models (VERY in-demand)**
-* Create **architecture diagrams (visual)**
-
----
-
-Just say:
-👉 *“Make this recruiter-ready + LinkedIn post”*
-
-[1]: https://docs.virustotal.com/reference/private-urls?utm_source=chatgpt.com "🔒 Private URLs"
-[2]: https://learn.microsoft.com/en-za/fabric/security/security-managed-private-endpoints-overview?utm_source=chatgpt.com "Overview of managed private endpoints for Microsoft Fabric - Microsoft Fabric | Microsoft Learn"
 
