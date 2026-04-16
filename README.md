@@ -6,6 +6,7 @@ The goal is to transform raw transactional data into high-quality, analytics-rea
 
 🧠 Business Problem
 The business lacked:
+
 *Centralized sales reporting
 *Visibility into product profitability
 *Insights into customer purchasing behavior
