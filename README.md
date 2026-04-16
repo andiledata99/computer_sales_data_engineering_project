@@ -22,6 +22,18 @@ DATA ARCHITECTURE
 
 DATA SECURITY 
 
+## 🔐 Data Security & Governance
+
+To ensure secure and reliable data handling:
+
+### 🔒 Access Control
+
+* Role-Based Access Control (RBAC):
+
+  * Data Engineer → Full access
+  * Data Analyst → Read-only
+  * Business manager → Restricted views
+
 <img width="352" height="335" alt="andile_data_engineer_server_roles" src="https://github.com/user-attachments/assets/2cc3b679-b742-4e6d-80fc-16edb8ee742d" />
 
 <img width="350" height="332" alt="ketro_data_analyst_server_roles" src="https://github.com/user-attachments/assets/263c8d38-faa6-4e01-8365-a4f13c724412" />
@@ -29,6 +41,9 @@ DATA SECURITY
 <img width="353" height="335" alt="rhofiwa_business_manager_server_roles" src="https://github.com/user-attachments/assets/51974f51-dbe8-49b5-b5a7-edcc812113d5" />
 
 DATASET
+
+<img width="422" height="59" alt="image" src="https://github.com/user-attachments/assets/b0bfac0c-c3e1-4afc-b2cb-033808e0a685" />
+
 
 SCRIPTS
 
@@ -118,17 +133,6 @@ To ensure secure and reliable data handling:
   * Data Analyst → Read-only
   * Business manager → Restricted views
 
-
-## 🔁 Version Control
-
-Version control was implemented using Git:
-
-### Key Practices:
-
-* Feature-based branching
-* Meaningful commit messages
-* Code version tracking
-* Collaboration-ready structure
 
 
 ## 🧪 Data Quality Checks
