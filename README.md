@@ -22,19 +22,6 @@ DATA ARCHITECTURE
 
 DATA SECURITY 
 
-## 🔐 Data Security & Governance
-
-To ensure secure and reliable data handling:
-
-### 🔒 Access Control
-
-* Role-Based Access Control (RBAC):
-
-  * Data Engineer → Full access
-  * Data Analyst → Read-only
-  * Business manager → Restricted views
-
-
 <img width="352" height="335" alt="andile_data_engineer_server_roles" src="https://github.com/user-attachments/assets/2cc3b679-b742-4e6d-80fc-16edb8ee742d" />
 
 <img width="350" height="332" alt="ketro_data_analyst_server_roles" src="https://github.com/user-attachments/assets/263c8d38-faa6-4e01-8365-a4f13c724412" />
@@ -43,28 +30,9 @@ To ensure secure and reliable data handling:
 
 DATASET
 
-<img width="398" height="37" alt="image" src="https://github.com/user-attachments/assets/e235669e-ba5c-4f2b-9fea-bf5db56de9bb" />
-
-
-
 SCRIPTS
 
 <img width="502" height="243" alt="image" src="https://github.com/user-attachments/assets/0835c8b8-3b32-4d47-b4ce-f58f68a899c5" />
-
-VERSION CONTROL
-## 🔁 Version Control
-
-Version control was implemented using Git:
-
-### Key Practices:
-
-* Feature-based branching
-* Meaningful commit messages
-* Code version tracking
-* Collaboration-ready structure
-
-
-
 
 
 
@@ -123,6 +91,30 @@ Source (CSV) → Ingestion → Data Lake → Transformation → Data Warehouse �
 
 #### Dimension Tables:
 
+
+## 🔐 Data Security & Governance
+
+To ensure secure and reliable data handling:
+
+### 🔒 Access Control
+
+* Role-Based Access Control (RBAC):
+
+  * Data Engineer → Full access
+  * Data Analyst → Read-only
+  * Business manager → Restricted views
+
+
+## 🔁 Version Control
+
+Version control was implemented using Git:
+
+### Key Practices:
+
+* Feature-based branching
+* Meaningful commit messages
+* Code version tracking
+* Collaboration-ready structure
 
 
 ## 🧪 Data Quality Checks
