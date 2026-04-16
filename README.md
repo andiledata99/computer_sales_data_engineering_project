@@ -126,20 +126,6 @@ Source (CSV) → Ingestion → Data Lake → Transformation → Data Warehouse �
 #### Dimension Tables:
 
 
-## 🔐 Data Security & Governance
-
-To ensure secure and reliable data handling:
-
-### 🔒 Access Control
-
-* Role-Based Access Control (RBAC):
-
-  * Data Engineer → Full access
-  * Data Analyst → Read-only
-  * Business manager → Restricted views
-
-
-
 ## 🧪 Data Quality Checks
 
 Implemented validation checks:
