@@ -1,4 +1,5 @@
 #📊 computer_sales_data_engineering_project
+
 🚀 Project Overview
 This project demonstrates the design and implementation of an end-to-end data engineering pipeline for a computer sales business.
 The goal is to transform raw transactional data into high-quality, analytics-ready datasets that support data-driven decision-making.
@@ -13,13 +14,14 @@ The business lacked:
 This project solves these challenges by building a scalable and automated data platform.
 **Repository structure**
 
-data_architecture
+DATA ARCHITECTURE
 
 <img width="958" height="495" alt="data modelling planning " src="https://github.com/user-attachments/assets/3b69feb7-d567-45f0-9760-8d6ab2280aef" />
 
 <img width="771" height="731" alt="Untitled Diagram" src="https://github.com/user-attachments/assets/c40f9987-aba8-4eb8-9839-7d9169b1dcd5" />
 
-data_security
+DATA SECURITY 
+
 <img width="352" height="335" alt="andile_data_engineer_server_roles" src="https://github.com/user-attachments/assets/2cc3b679-b742-4e6d-80fc-16edb8ee742d" />
 
 <img width="350" height="332" alt="ketro_data_analyst_server_roles" src="https://github.com/user-attachments/assets/263c8d38-faa6-4e01-8365-a4f13c724412" />
