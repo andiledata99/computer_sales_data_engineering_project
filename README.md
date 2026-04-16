@@ -16,6 +16,7 @@ The business lacked:
 *Performance tracking for sales employees
 
 This project solves these challenges by building a scalable and automated data platform.
+
 **Repository structure**
 
 DATA ARCHITECTURE
