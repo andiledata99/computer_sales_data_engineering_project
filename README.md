@@ -29,8 +29,16 @@ DATA SECURITY
 <img width="353" height="335" alt="rhofiwa_business_manager_server_roles" src="https://github.com/user-attachments/assets/51974f51-dbe8-49b5-b5a7-edcc812113d5" />
 
 dataset
+
 scripts
+
+
+
 LICENSE
+
+<img width="356" height="196" alt="image" src="https://github.com/user-attachments/assets/52c589d3-2bed-4830-b560-63590a4ad5f4" />
+
+
 README.md
 
 
