@@ -1,6 +1,6 @@
-#📊 computer_sales_data_engineering_project 
+## 📊 computer_sales_data_engineering_project 
 
-🚀 Project Overview
+## 🚀 Project Overview
 This project demonstrates the design and implementation of an end-to-end data engineering pipeline for a computer sales business.
 The goal is to transform raw transactional data into high-quality, analytics-ready datasets that support data-driven decision-making.
 
@@ -19,13 +19,13 @@ This project solves these challenges by building a scalable and automated data p
 
 **Repository structure**
 
-DATA ARCHITECTURE
+## DATA ARCHITECTURE
 
 <img width="958" height="495" alt="data modelling planning " src="https://github.com/user-attachments/assets/3b69feb7-d567-45f0-9760-8d6ab2280aef" />
 
 <img width="771" height="731" alt="Untitled Diagram" src="https://github.com/user-attachments/assets/c40f9987-aba8-4eb8-9839-7d9169b1dcd5" />
 
-DATA SECURITY 
+## DATA SECURITY 
 
 ## 🔐 Data Security & Governance
 
@@ -45,17 +45,17 @@ To ensure secure and reliable data handling:
 
 <img width="353" height="335" alt="rhofiwa_business_manager_server_roles" src="https://github.com/user-attachments/assets/51974f51-dbe8-49b5-b5a7-edcc812113d5" />
 
-DATASET
+## DATASET
 
 <img width="422" height="59" alt="image" src="https://github.com/user-attachments/assets/b0bfac0c-c3e1-4afc-b2cb-033808e0a685" />
 
 
-SCRIPTS
+## SCRIPTS
 
 <img width="502" height="243" alt="image" src="https://github.com/user-attachments/assets/0835c8b8-3b32-4d47-b4ce-f58f68a899c5" />
 
 
-VERSION CONTROL
+## VERSION CONTROL
 ## 🔁 Version Control
 
 Version control was implemented using Git:
@@ -70,12 +70,12 @@ Version control was implemented using Git:
 <img width="449" height="116" alt="image" src="https://github.com/user-attachments/assets/c6676697-9b2e-4c90-9c36-d7a26833bcfd" />
 
 
-LICENSE
+## LICENSE
 
 <img width="356" height="196" alt="image" src="https://github.com/user-attachments/assets/52c589d3-2bed-4830-b560-63590a4ad5f4" />
 
 
-README.md
+## README.md
 
 
 
