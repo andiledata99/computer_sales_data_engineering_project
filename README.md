@@ -28,9 +28,11 @@ DATA SECURITY
 
 <img width="353" height="335" alt="rhofiwa_business_manager_server_roles" src="https://github.com/user-attachments/assets/51974f51-dbe8-49b5-b5a7-edcc812113d5" />
 
-dataset
+DATASET
 
-scripts
+SCRIPTS
+
+<img width="502" height="243" alt="image" src="https://github.com/user-attachments/assets/0835c8b8-3b32-4d47-b4ce-f58f68a899c5" />
 
 
 
