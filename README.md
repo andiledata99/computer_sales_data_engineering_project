@@ -7,13 +7,13 @@ The goal is to transform raw transactional data into high-quality, analytics-rea
 🧠 Business Problem
 The business lacked:
 
-*Centralized sales reporting
+- Centralized sales reporting
 
-*Visibility into product profitability
+- Visibility into product profitability
 
-*Insights into customer purchasing behavior
+- Insights into customer purchasing behavior
 
-*Performance tracking for sales employees
+- Performance tracking for sales employees
 
 This project solves these challenges by building a scalable and automated data platform.
 
@@ -33,11 +33,11 @@ To ensure secure and reliable data handling:
 
 ### 🔒 Access Control
 
-* Role-Based Access Control (RBAC):
+- Role-Based Access Control (RBAC):
 
-  * Data Engineer → Full access
-  * Data Analyst → Read-only
-  * Business manager → Restricted views
+  - Data Engineer → Full access
+  - Data Analyst → Read-only
+  - Business manager → Restricted views
 
 <img width="352" height="335" alt="andile_data_engineer_server_roles" src="https://github.com/user-attachments/assets/2cc3b679-b742-4e6d-80fc-16edb8ee742d" />
 
@@ -62,29 +62,26 @@ Version control was implemented using Git:
 
 ### Key Practices:
 
-* Feature-based branching
-* Meaningful commit messages
-* Code version tracking
-* Collaboration-ready structure
+- Feature-based branching
+- Meaningful commit messages
+- Code version tracking
+- Collaboration-ready structure
 
 <img width="449" height="116" alt="image" src="https://github.com/user-attachments/assets/c6676697-9b2e-4c90-9c36-d7a26833bcfd" />
 
 
-
 ## README.md
-
-
 
 
 ``
 
 ### Components:
 
-* **Data Source:** Raw PC sales dataset
-* **Ingestion: SQL scripts
-* **Storage:** Data lake (raw, processed, curated layers)
-* **Transformation:** SQL + Python
-* **Warehouse:** Structured star schema
+- **Data Source:** Raw PC sales dataset
+- **Ingestion: SQL scripts
+- **Storage:** Data lake (raw, processed, curated layers)
+- **Transformation:** SQL + Python
+- **Warehouse:** Structured star schema
 
 
 ---
@@ -93,23 +90,23 @@ Version control was implemented using Git:
 
 ### 1. Data Ingestion
 
-* Loaded raw CSV data using Python
-* Stored data in the **raw layer** of the data lake
+- Loaded raw CSV data using Python
+- Stored data in the **raw layer** of the data lake
 
 ---
 
 ### 2. Data Storage (Medallion Architecture)
 
-* **Raw Layer:** Original dataset**
-* **Processed Layer:** Cleaned and standardized data
-* **Curated Layer:** Business-ready datasets
+- **Raw Layer:** Original dataset**
+- **Processed Layer:** Cleaned and standardized data
+- **Curated Layer:** Business-ready datasets
 
 ---
 
 ### 3. Data Transformation
 
-* Handled missing values and inconsistencies
-* Standardized formats (dates, pricing, categories)
+- Handled missing values and inconsistencies
+- Standardized formats (dates, pricing, categories)
 
 
 ### 4. Data Modelling (Star Schema ⭐)
@@ -123,9 +120,9 @@ Version control was implemented using Git:
 
 Implemented validation checks:
 
-* Null value detection
-* Duplicate removal
-* Invalid pricing checks
+- Null value detection
+- Duplicate removal
+- Invalid pricing checks
 
 Ensures **high data reliability and trust**.
 
@@ -133,18 +130,18 @@ Ensures **high data reliability and trust**.
 
 ## ⚙️ Pipeline Automation
 
-* Automated workflows using orchestration (Airflow-ready design)
-* Scheduled data refreshes
-* Reduced manual intervention
+- Automated workflows using orchestration (Airflow-ready design)
+- Scheduled data refreshes
+- Reduced manual intervention
 
 ---
 
 ## ☁️ Scalability & Future Improvements
 
-* Cloud migration (AWS / Azure)
-* Real-time streaming pipelines
-* Integration with APIs
-* Advanced analytics (ML models)
+- Cloud migration (AWS / Azure)
+- Real-time streaming pipelines
+- Integration with APIs
+- Advanced analytics (ML models)
 
 ---
 
@@ -152,20 +149,20 @@ Ensures **high data reliability and trust**.
 
 This solution enables:
 
-* Better pricing strategies
-* Improved sales performance tracking
-* Data-driven decision making
-* Increased operational efficiency
+- Better pricing strategies
+- Improved sales performance tracking
+- Data-driven decision making
+- Increased operational efficiency
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* SQL
-* Ssms
-* Git & GitHub
-* (Optional: Airflow, Snowflake, AWS/Azure)
+- Python
+- SQL
+- Ssms
+- Git & GitHub
+- (Optional: Airflow, Snowflake, AWS/Azure)
 
 ---
 
