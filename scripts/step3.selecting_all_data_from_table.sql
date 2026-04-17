@@ -1,0 +1,36 @@
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_location]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_priority]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_payment]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_store]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_date]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_customer]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_pc_spec]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[dim_channel]
+SELECT
+    *
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales]

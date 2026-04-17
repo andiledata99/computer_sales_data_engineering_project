@@ -17,7 +17,8 @@
 	[Credit_Score] [int] NOT NULL,
 	[Cost_of_Repairs] [nvarchar](50) NOT NULL,
 	[Total_Sales_per_Employee] [int] NOT NULL,
-	[PC_Market_Price] [int] NOT NULL
+	[PC_Market_Price] [int] NOT NULL,
+    [Load_date] DATETIME DEFAULT GETDATE(),
    Constraint fk_Customer_ID 
              foreign key (Customer_ID)
              references [PC_Sales_Staging_dtw].[dbo].[dim_customer] (Customer_ID),
@@ -44,21 +45,7 @@
 			References [PC_Sales_Staging_dtw].[dbo].[dim_pc_spec] (PC_make_ID)
 )
 
-    ---checking if step was implemented
-    SELECT * FROM PC_Sales_Staging_dtw.[dbo].[Fact_pc_sales]
-
   ---Inserting data into table 
-  SELECT DISTINCT
-       [Cost_Price]
-      ,[Sale_Price]
-      ,[Discount_Amount]
-      ,[Finance_Amount]
-      ,[Credit_Score]
-      ,[Cost_of_Repairs]
-      ,[Total_Sales_per_Employee]
-      ,[PC_Market_Price]
-   INTO [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales]
-   FROM [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data]
 
      INSERT INTO [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
               [Cost_Price]
@@ -79,3 +66,7 @@
              ,[Total_Sales_per_Employee]
              ,[PC_Market_Price]
        FROM  [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data]
+
+       
+    ---checking if step was implemented
+    SELECT * FROM PC_Sales_Staging_dtw.[dbo].[Fact_pc_sales]
