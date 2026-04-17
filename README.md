@@ -167,7 +167,7 @@ This solution enables:
 
 * Python
 * SQL
-* Power BI
+* Ssms
 * Git & GitHub
 * (Optional: Airflow, Snowflake, AWS/Azure)
 
