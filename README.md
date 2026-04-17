@@ -70,10 +70,6 @@ Version control was implemented using Git:
 <img width="449" height="116" alt="image" src="https://github.com/user-attachments/assets/c6676697-9b2e-4c90-9c36-d7a26833bcfd" />
 
 
-## LICENSE
-
-<img width="356" height="196" alt="image" src="https://github.com/user-attachments/assets/52c589d3-2bed-4830-b560-63590a4ad5f4" />
-
 
 ## README.md
 
