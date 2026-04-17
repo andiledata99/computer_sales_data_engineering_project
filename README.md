@@ -79,11 +79,8 @@ Version control was implemented using Git:
 
 
 
-``` 🏗️ Data Architecture
 
-
-Source (CSV) → Ingestion → Data Lake → Transformation → Data Warehouse → BI Dashboard
-```
+``
 
 ### Components:
 
