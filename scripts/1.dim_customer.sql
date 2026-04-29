@@ -1,5 +1,6 @@
 ----Dim Customer inserting primary key
-DROP TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer] CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer](
+DROP TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer]
+CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer](
     [Customer_ID] int identity (1, 1) primary key,
     [Customer_Name] [nvarchar](50) NOT NULL,
     [Customer_Surname] [nvarchar](50) NOT NULL,
@@ -27,8 +28,8 @@ SELECT
     [Sales_Person_Department]
 FROM
     [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data]
-    ss       ss s                                                                                                                    s ---checking if step was implemented
+   ---checking if step was implemented
 SELECT
     *
 FROM
-    [PC_Sales_Staging_dtw].[dbo].[dim_customer]
+    [PC_Sales_Staging_dtw].[dbo].[dim_customer] 
