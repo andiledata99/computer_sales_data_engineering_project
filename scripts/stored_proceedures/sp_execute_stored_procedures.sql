@@ -3,7 +3,7 @@
 Stored Procedure: sp_execute_all_procedures
 Description: Master orchestration procedure for ETL pipeline
 Purpose: Execute all dimensional and fact table creation procedures
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

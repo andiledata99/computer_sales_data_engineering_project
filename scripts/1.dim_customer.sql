@@ -3,7 +3,7 @@
 Script: 1.dim_customer.sql
 Description: Creates and populates dim_customer dimension table
 Purpose: Store customer demographic information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

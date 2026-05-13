@@ -3,7 +3,7 @@
 Drop All Stored Procedures Script
 Description: Removes all stored procedures from the database
 Purpose: Clean up and remove stored procedures for redeployment
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 Usage: Execute this script when redeploying or cleaning up
 =======================================================

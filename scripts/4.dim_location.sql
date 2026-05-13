@@ -3,7 +3,7 @@
 Script: 4.dim_location.sql
 Description: Creates and populates dim_location dimension table
 Purpose: Store geographic location information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

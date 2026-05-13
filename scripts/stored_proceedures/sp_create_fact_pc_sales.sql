@@ -3,7 +3,7 @@
 Stored Procedure: sp_create_fact_pc_sales
 Description: Creates fact_pc_sales table with foreign keys and populates data
 Purpose: Store PC sales transactions and measures with dimension references
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

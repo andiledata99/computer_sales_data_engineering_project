@@ -3,7 +3,7 @@
 Stored Procedure: sp_create_database
 Description: Creates required databases for the solution
 Purpose: Initialize staging and data warehouse databases
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

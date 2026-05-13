@@ -3,7 +3,7 @@
 Script: 3.dim_date.sql
 Description: Creates and populates dim_date dimension table
 Purpose: Store purchase and shipment date information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

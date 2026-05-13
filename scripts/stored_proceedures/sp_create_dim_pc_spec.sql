@@ -3,7 +3,7 @@
 Stored Procedure: sp_create_dim_pc_spec
 Description: Creates and populates dim_pc_spec dimension
 Purpose: Store PC specification information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

@@ -3,7 +3,7 @@
 Stored Procedure: sp_create_dim_priority
 Description: Creates and populates dim_priority dimension
 Purpose: Store priority level information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

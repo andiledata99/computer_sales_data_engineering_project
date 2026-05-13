@@ -3,7 +3,7 @@
 Script: 6.dim_pc_spec.sql
 Description: Creates and populates dim_pc_spec dimension table
 Purpose: Store PC specification information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

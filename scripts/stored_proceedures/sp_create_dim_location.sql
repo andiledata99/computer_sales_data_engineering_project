@@ -3,7 +3,7 @@
 Stored Procedure: sp_create_dim_location
 Description: Creates and populates dim_location dimension
 Purpose: Store geographic location information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */

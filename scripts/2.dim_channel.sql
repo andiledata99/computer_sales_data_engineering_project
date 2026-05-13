@@ -3,7 +3,7 @@
 Script: 2.dim_channel.sql
 Description: Creates and populates dim_channel dimension table
 Purpose: Store sales channel information
-Author: Data Engineering Team
+Author: Data Engineer Andile Dube
 Date: 2026-05-13
 =======================================================
 */
