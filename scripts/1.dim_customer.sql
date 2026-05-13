@@ -1,6 +1,14 @@
-----Dim Customer inserting primary key
-DROP TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer]
-CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer](
+/*
+=======================================================
+Script: 1.dim_customer.sql
+Description: Creates and populates dim_customer dimension table
+Purpose: Store customer demographic information
+Author: Data Engineering Team
+Date: 2026-05-13
+=======================================================
+*/
+
+CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[dim_customer](
     [Customer_ID] int identity (1, 1) primary key,
     [Customer_Name] [nvarchar](50) NOT NULL,
     [Customer_Surname] [nvarchar](50) NOT NULL,
@@ -9,7 +17,10 @@ CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_customer](
     [Sales_Person_Name] [nvarchar](50) NOT NULL,
     [Sales_Person_Department] [nvarchar](50) NOT NULL,
     [Load_date] DATETIME DEFAULT GETDATE()
-) ---Inserting data into table 
+)
+
+-- Insert distinct customer records from raw data
+-- Load unique customers into dimension table
 INSERT INTO
     [PC_Sales_Staging_dtw].[dbo].[dim_customer](
         [Customer_Name],
@@ -28,7 +39,8 @@ SELECT
     [Sales_Person_Department]
 FROM
     [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data]
-   ---checking if step was implemented
+
+-- Verification Query: Display loaded customer dimension records
 SELECT
     *
 FROM

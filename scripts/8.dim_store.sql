@@ -1,5 +1,5 @@
 ---Dim store inserting primary key
-DROP TABLE [PC_Sales_Staging_dtw].[dbo].[dim_store] CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_store](
+CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[dim_store](
      [Shop_ID] int identity (1, 1) primary key,
      [Shop_Name] [nvarchar](50) NOT NULL,
      [Shop_Age] [nvarchar](50) NOT NULL,

@@ -1,5 +1,5 @@
 ---fact_pc_sales inserting primary key
-DROP TABLE [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales] CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
+CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
    [PC_Sales_ID] int identity (1, 1) primary key,
    [Customer_ID] int,
    [Channel_ID] int,
@@ -55,3 +55,55 @@ SELECT
    *
 FROM
    PC_Sales_Staging_dtw.[dbo].[Fact_pc_sales]
+
+---Joined query with all dimensions
+SELECT
+    f.PC_Sales_ID,
+    c.Customer_Name,
+    c.Customer_Surname,
+    c.Customer_Contact_Number,
+    c.Customer_Email_Address,
+    c.Sales_Person_Name,
+    c.Sales_Person_Department,
+    ch.Channel,
+    d.Purchase_Date,
+    d.Ship_Date,
+    l.Continent,
+    l.Country_or_State,
+    l.Province_or_City,
+    p.Payment_Method,
+    pr.Priority,
+    s.Shop_Name,
+    s.Shop_Age,
+    pc.PC_Make,
+    pc.PC_Model,
+    pc.Storage_Type,
+    pc.RAM,
+    pc.Storage_Capacity,
+    f.Cost_Price,
+    f.Sale_Price,
+    f.Discount_Amount,
+    f.Finance_Amount,
+    f.Credit_Score,
+    f.Cost_of_Repairs,
+    f.Total_Sales_per_Employee,
+    f.PC_Market_Price,
+    f.Load_date
+FROM
+    [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales] f
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_customer] c ON f.Customer_ID = c.Customer_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_channel] ch ON f.Channel_ID = ch.Channel_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_date] d ON f.Date_ID = d.Date_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_location] l ON f.Location_ID = l.Location_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_payment] p ON f.Paymenty_ID = p.Paymenty_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_priority] pr ON f.Priority_ID = pr.Priority_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_store] s ON f.Shop_ID = s.Shop_ID
+JOIN
+    [PC_Sales_Staging_dtw].[dbo].[dim_pc_spec] pc ON f.PC_make_ID = pc.PC_make_ID

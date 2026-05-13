@@ -1,14 +1,26 @@
-CREATE PROCEDURE sp_create_dim_store
+/*
+=======================================================
+Stored Procedure: sp_create_dim_store
+Description: Creates and populates dim_store dimension
+Purpose: Store store information
+Author: Data Engineering Team
+Date: 2026-05-13
+=======================================================
+*/
+
+CREATE OR ALTER PROCEDURE sp_create_dim_store
 AS
 BEGIN
-  -- SQL_statements to be executed
- ---Dim store inserting primary key
-DROP TABLE [PC_Sales_Staging_dtw].[dbo].[dim_store] CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_store](
+  -- SQL statements to be executed
+ -- Dim store dimension table creation
+CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[dim_store](
      [Shop_ID] int identity (1, 1) primary key,
      [Shop_Name] [nvarchar](50) NOT NULL,
      [Shop_Age] [nvarchar](50) NOT NULL,
      [Load_date] DATETIME DEFAULT GETDATE()
-) ---Inserting data into table 
+)
+ 
+-- Insert distinct store records from raw data
 INSERT INTO
      [PC_Sales_Staging_dtw].[dbo].[dim_store](
           [Shop_Name],
@@ -19,7 +31,8 @@ SELECT
      [Shop_Age]
 FROM
      [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data] 
----checking if step was implemented
+
+-- Verification Query: Display loaded store dimension records
 SELECT
      *
 FROM

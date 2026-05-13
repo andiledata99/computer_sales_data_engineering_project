@@ -1,5 +1,5 @@
 ---Dim priority inserting primary key
-DROP TABLE [PC_Sales_Staging_dtw].[dbo].[dim_priority] CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_priority](
+CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[dim_priority](
       [Priority_ID] int identity (1, 1) primary key,
       [Priority] [nvarchar](50) NOT NULL,
       [Load_date] DATETIME DEFAULT GETDATE()
