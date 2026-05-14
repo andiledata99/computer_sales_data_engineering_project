@@ -1,10 +1,21 @@
----Dim store inserting primary key
+/*
+=======================================================
+Script: 8.dim_store.sql
+Description: Creates and populates dim_store dimension table
+Purpose: Store store attributes and metadata
+Author: Data Engineering Team
+Date: 2026-05-14
+=======================================================
+*/
+
 CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[dim_store](
      [Shop_ID] int identity (1, 1) primary key,
      [Shop_Name] [nvarchar](50) NOT NULL,
      [Shop_Age] [nvarchar](50) NOT NULL,
      [Load_date] DATETIME DEFAULT GETDATE()
-) ---Inserting data into table 
+)
+
+-- Insert distinct store records from raw data
 INSERT INTO
      [PC_Sales_Staging_dtw].[dbo].[dim_store](
           [Shop_Name],
@@ -14,8 +25,9 @@ SELECT
      DISTINCT [Shop_Name],
      [Shop_Age]
 FROM
-     [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data] 
----checking if step was implemented
+     [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data]
+
+-- Verification Query: Display loaded store dimension records
 SELECT
      *
 FROM

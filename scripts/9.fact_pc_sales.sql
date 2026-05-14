@@ -1,4 +1,13 @@
----fact_pc_sales inserting primary key
+/*
+=======================================================
+Script: 9.fact_pc_sales.sql
+Description: Creates and populates Fact_pc_sales fact table
+Purpose: Store PC sales transaction facts and reference dimensions
+Author: Data Engineer Andile Dube
+Date: 2026-05-14
+=======================================================
+*/
+
 CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
    [PC_Sales_ID] int identity (1, 1) primary key,
    [Customer_ID] int,
@@ -27,7 +36,8 @@ CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
    Constraint fk_Priority_ID Foreign key (Priority_ID) References [PC_Sales_Staging_dtw].[dbo].[dim_Priority] (Priority_ID),
    Constraint fk_PC_make_ID Foreign key (PC_make_ID) References [PC_Sales_Staging_dtw].[dbo].[dim_pc_spec] (PC_make_ID)
 )
- ---Inserting data into table 
+
+-- Inserting data into table
 INSERT INTO
    [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
       [Cost_Price],
@@ -50,13 +60,14 @@ SELECT
    [PC_Market_Price]
 FROM
    [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data] 
----checking if step was implemented
+
+-- Verification Query: Display loaded fact table records
 SELECT
    *
 FROM
    PC_Sales_Staging_dtw.[dbo].[Fact_pc_sales]
 
----Joined query with all dimensions
+-- Joined query with all dimensions
 SELECT
     f.PC_Sales_ID,
     c.Customer_Name,
