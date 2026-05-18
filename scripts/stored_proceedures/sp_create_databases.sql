@@ -8,9 +8,11 @@ Date: 2026-05-13
 =======================================================
 */
 
-CREATE OR ALTER PROCEDURE sp_create_database
+CREATE OR ALTER PROCEDURE dbo.sp_create_database
 AS
 BEGIN
+    SET NOCOUNT ON;
+
     -- Create Staging Database
     IF DB_ID('PC_Sales_Staging_dtw') IS NULL
     BEGIN
@@ -25,6 +27,7 @@ BEGIN
         PRINT 'Data Warehouse database created successfully.';
     END;
 END;
+GO
 
 
 

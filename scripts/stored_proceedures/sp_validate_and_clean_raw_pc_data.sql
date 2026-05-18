@@ -8,7 +8,7 @@ Date: 2026-05-14
 =======================================================
 */
 
-CREATE OR ALTER PROCEDURE sp_validate_and_clean_raw_pc_data
+CREATE OR ALTER PROCEDURE dbo.sp_validate_and_clean_raw_pc_data
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -319,3 +319,4 @@ BEGIN
     FROM
         PC_Sales_Staging_dtw.dbo.Raw_PC_Data_Validation;
 END;
+GO

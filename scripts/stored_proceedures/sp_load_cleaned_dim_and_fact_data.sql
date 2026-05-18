@@ -8,7 +8,7 @@ Date: 2026-05-14
 =======================================================
 */
 
-CREATE OR ALTER PROCEDURE sp_load_cleaned_dim_and_fact_data
+CREATE OR ALTER PROCEDURE dbo.sp_load_cleaned_dim_and_fact_data
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -262,3 +262,4 @@ BEGIN
         (SELECT COUNT(*) FROM PC_Sales_Staging_dtw.dbo.Raw_PC_Data_Cleaned) AS LoadedCleanRows,
         (SELECT COUNT(*) FROM PC_Sales_Staging_dtw.dbo.Fact_pc_sales) AS LoadedFactRows;
 END;
+GO

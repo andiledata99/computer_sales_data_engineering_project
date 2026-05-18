@@ -8,12 +8,15 @@ Date: 2026-05-13
 =======================================================
 */
 
-CREATE OR ALTER PROCEDURE sp_create_fact_pc_sales
+CREATE OR ALTER PROCEDURE dbo.sp_create_fact_pc_sales
 AS
 BEGIN
+     SET NOCOUNT ON;
 
--- Fact PC Sales table creation with dimensional keys and constraints
-CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
+     -- Fact PC Sales table creation with dimensional keys and constraints
+     IF OBJECT_ID('PC_Sales_Staging_dtw.dbo.Fact_pc_sales', 'U') IS NULL
+     BEGIN
+          CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
    [PC_Sales_ID] int identity (1, 1) primary key,
    [Customer_ID] int,
    [Channel_ID] int,
@@ -40,12 +43,13 @@ CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
    Constraint fk_Store_ID Foreign key (Shop_ID) References [PC_Sales_Staging_dtw].[dbo].[dim_Store] (Shop_ID),
    Constraint fk_Priority_ID Foreign key (Priority_ID) References [PC_Sales_Staging_dtw].[dbo].[dim_Priority] (Priority_ID),
    Constraint fk_PC_make_ID Foreign key (PC_make_ID) References [PC_Sales_Staging_dtw].[dbo].[dim_pc_spec] (PC_make_ID)
-)
- 
--- Insert PC sales transactions from raw data
--- Load sales measures and dimensional keys into fact table
-INSERT INTO
-   [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
+          );
+     END;
+
+     -- Insert PC sales transactions from raw data
+     -- Load sales measures and dimensional keys into fact table
+     INSERT INTO
+         [PC_Sales_Staging_dtw].[dbo].[Fact_pc_sales](
       [Cost_Price],
       [Sale_Price],
       [Discount_Amount],
@@ -66,12 +70,10 @@ SELECT
    [PC_Market_Price]
 FROM
    [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data] 
-
--- Verification Query: Display loaded fact table records
-SELECT
-   *
-FROM
-   PC_Sales_Staging_dtw.[dbo].[Fact_pc_sales]
+    -- Verification Query: Display loaded fact table records
+    SELECT * FROM PC_Sales_Staging_dtw.[dbo].[Fact_pc_sales];
+END;
+GO
 
 /*
 =======================================================

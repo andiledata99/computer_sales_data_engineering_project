@@ -8,33 +8,36 @@ Date: 2026-05-13
 =======================================================
 */
 
-CREATE OR ALTER PROCEDURE sp_create_dim_store
+CREATE OR ALTER PROCEDURE dbo.sp_create_dim_store
 AS
 BEGIN
-  -- SQL statements to be executed
- -- Dim store dimension table creation
-CREATE TABLE IF NOT EXISTS [PC_Sales_Staging_dtw].[dbo].[dim_store](
-     [Shop_ID] int identity (1, 1) primary key,
-     [Shop_Name] [nvarchar](50) NOT NULL,
-     [Shop_Age] [nvarchar](50) NOT NULL,
-     [Load_date] DATETIME DEFAULT GETDATE()
-)
- 
--- Insert distinct store records from raw data
-INSERT INTO
-     [PC_Sales_Staging_dtw].[dbo].[dim_store](
-          [Shop_Name],
-          [Shop_Age]
-     )
-SELECT
-     DISTINCT [Shop_Name],
-     [Shop_Age]
-FROM
-     [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data] 
+    SET NOCOUNT ON;
 
--- Verification Query: Display loaded store dimension records
-SELECT
-     *
-FROM
-     [PC_Sales_Staging_dtw].[dbo].[dim_store]
+    -- Dim store dimension table creation
+    IF OBJECT_ID('PC_Sales_Staging_dtw.dbo.dim_store', 'U') IS NULL
+    BEGIN
+        CREATE TABLE [PC_Sales_Staging_dtw].[dbo].[dim_store](
+            [Shop_ID] int IDENTITY(1,1) PRIMARY KEY,
+            [Shop_Name] [nvarchar](50) NOT NULL,
+            [Shop_Age] [nvarchar](50) NOT NULL,
+            [Load_date] DATETIME DEFAULT GETDATE()
+        );
+    END;
+
+    -- Insert distinct store records from raw data, avoid duplicates
+    INSERT INTO [PC_Sales_Staging_dtw].[dbo].[dim_store](
+        [Shop_Name],
+        [Shop_Age]
+    )
+    SELECT DISTINCT rd.[Shop_Name], rd.[Shop_Age]
+    FROM [PC_Sales_Staging_dtw].[dbo].[Raw_PC_Data] rd
+    WHERE NOT EXISTS (
+        SELECT 1 FROM [PC_Sales_Staging_dtw].[dbo].[dim_store] d
+        WHERE d.Shop_Name = rd.Shop_Name
+          AND d.Shop_Age = rd.Shop_Age
+    );
+
+    -- Verification Query: Display loaded store dimension records
+    SELECT * FROM [PC_Sales_Staging_dtw].[dbo].[dim_store];
 END;
+GO
